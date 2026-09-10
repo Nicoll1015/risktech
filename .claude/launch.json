@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "risktech-static",
-      "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8123"],
+      "runtimeExecutable": "powershell.exe",
+      "runtimeArgs": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", ".claude/static-server.ps1"],
       "port": 8123
     }
   ]
