@@ -295,17 +295,39 @@ border-radius: 20px;
     width: 100% !important;
     max-width: 100% !important;
     flex: none !important;
+    padding: 14px 16px !important;
+    border-radius: 16px !important;
   }
 
-  .elementor-6496 .elementor-element.elementor-element-241a38e .risk-flow__card--tl {
-    order: 1;
+  .elementor-6496 .elementor-element.elementor-element-241a38e .risk-flow__card .elementor-icon-box-wrapper {
+    gap: 6px;
   }
 
-  .elementor-6496 .elementor-element.elementor-element-241a38e .risk-flow__card--tr {
-    order: 2;
+  .elementor-6496 .elementor-element.elementor-element-241a38e .risk-flow__card .elementor-icon-box-icon svg {
+    width: 34px;
+    height: 34px;
+  }
+
+  .elementor-6496 .elementor-element.elementor-element-241a38e .risk-flow__card .elementor-icon-box-title,
+  .elementor-6496 .elementor-element.elementor-element-241a38e .risk-flow__card .elementor-icon-box-title a {
+    font-size: 16px;
+    margin-block-end: 4px;
+  }
+
+  .elementor-6496 .elementor-element.elementor-element-241a38e .risk-flow__card .elementor-icon-box-description {
+    font-size: 13px;
   }
 
   .elementor-6496 .elementor-element.elementor-element-241a38e .risk-flow__logo {
+    order: 1;
+    max-width: 220px;
+  }
+
+  .elementor-6496 .elementor-element.elementor-element-241a38e .risk-flow__card--tl {
+    order: 2;
+  }
+
+  .elementor-6496 .elementor-element.elementor-element-241a38e .risk-flow__card--tr {
     order: 3;
   }
 
