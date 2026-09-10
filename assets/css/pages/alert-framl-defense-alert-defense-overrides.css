@@ -1,0 +1,82 @@
+.elementor-element-82185da,
+.elementor-element-8a45d6f,
+.elementor-element-a31d69f,
+.elementor-element-2b20fd6,
+.elementor-element-9a7f7ea,
+.elementor-element-1a344e0{
+	flex:1 1 0 !important;
+	width:auto !important;
+}
+.alert-gradient-text{
+	background:linear-gradient(90deg, #1A428F 0%, #6435C9 55%, #8D2EED 100%);
+	-webkit-background-clip:text;
+	background-clip:text;
+	-webkit-text-fill-color:transparent;
+	color:#6435C9;
+}
+.elementor-element-eb1ab2a:not(.elementor-motion-effects-element-type-background),
+.elementor-element-1ca04e5:not(.elementor-motion-effects-element-type-background),
+.elementor-element-a4c3e0a:not(.elementor-motion-effects-element-type-background),
+.elementor-element-26c3e1d:not(.elementor-motion-effects-element-type-background){background-color:#F5F2F2 !important;background-image:none !important;border-radius:20px !important;padding:24px 20px !important;transition:background-color .3s ease, background-image .3s ease;}
+.elementor-element-eb1ab2a,
+.elementor-element-1ca04e5,
+.elementor-element-a4c3e0a,
+.elementor-element-26c3e1d{
+	--min-height:220px !important;
+	min-height:220px !important;
+	--width:100% !important;
+	width:100% !important;
+	flex:1 1 0 !important;
+}
+.elementor-element-a21cf15{align-items:stretch !important;}
+.elementor-element-3d37b9d:hover,
+.elementor-element-b3be13f:hover,
+.elementor-element-23ecdc1:hover{background-color:#7064FF !important;background-image:radial-gradient(circle at center center, #BEB9FF 6%, #7064FF 96%) !important;}
+.elementor-element-c223c9c .elementor-button{
+	background-color:#7064FF !important;
+	font-size:22px !important;
+	padding:18px 36px !important;
+}
+.elementor-element-a8cd02f .elementor-button{
+	font-size:22px !important;
+	padding:18px 36px !important;
+}
+.flow-card .elementor-icon-box-title{font-size:22px !important;}
+.flow-card .elementor-icon-box-description{font-size:18px !important;line-height:1.6 !important;}
+.elementor-element-d3240c,
+.elementor-element-d3241c,
+.elementor-element-d3242c,
+.elementor-element-d3243c{font-size:18px !important;}
+.elementor-element-eb1ab2a:hover,
+.elementor-element-1ca04e5:hover,
+.elementor-element-a4c3e0a:hover,
+.elementor-element-26c3e1d:hover{background-color:transparent !important;background-image:radial-gradient(at center center, #BEB9FF42 6%, #7064FF 96%) !important;}
+.cada-alerta-cta-card{
+	box-sizing:border-box;
+	width:100% !important;
+	display:flex !important;
+	flex-direction:column !important;
+	align-items:center !important;
+	text-align:center !important;
+	background-color:#0A1F3D !important;
+	background-image:url("../../../assets/img/2026/06/fondo-estandares.webp") !important;
+	background-size:cover !important;
+	background-position:center center !important;
+	background-repeat:no-repeat !important;
+	border-radius:40px !important;
+	padding:56px 40px !important;
+	margin:20px 0 40px !important;
+}
+.cada-alerta-cta-card .elementor-element-47fbc1d{max-width:640px;}
+.cada-alerta-cta-card .elementor-element-47fbc1d .elementor-heading-title{text-align:center;}
+.cada-alerta-cta-card .elementor-element-3b9250e{max-width:720px;margin:0 auto;}
+.cada-alerta-cta-card .elementor-element-3b9250e p{text-align:center;}
+.cada-alerta-cta-card .elementor-element-af3a0dd{margin-top:8px;}
+.cada-alerta-cta-card .elementor-element-47fbc1d .elementor-heading-title{font-size:41px;line-height:45px;letter-spacing:-1px;font-weight:600;}
+.cada-alerta-cta-card .elementor-element-af3a0dd .elementor-button{background-color:#7064FF !important;}
+@media (max-width:767px){
+	.cada-alerta-cta-card .elementor-element-47fbc1d .elementor-heading-title{font-size:25px;line-height:30px;letter-spacing:-1px;}
+}
+@media (max-width:767px){
+	.cada-alerta-cta-card{padding:40px 24px;border-radius:28px;}
+}

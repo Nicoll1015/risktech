@@ -1,0 +1,197 @@
+/* ==========================================================================
+   RiskTech — Ajustes responsive
+   --------------------------------------------------------------------------
+   Se carga al final del <head>, después de Elementor y de los estilos de
+   página, para poder corregir sin recurrir a !important salvo donde Elementor
+   ya lo usa.
+
+   El sitio ya trae los puntos de ruptura de Elementor. Esta hoja solo corrige
+   los desbordamientos horizontales reales medidos a 360, 375, 768 y 1024 px, y
+   añade algunas redes de seguridad que no alteran el diseño de escritorio.
+
+   Índice
+     1. Red de seguridad global
+     2. Medios embebidos
+     3. Tablas y texto largo (páginas legales)
+     4. Correcciones puntuales de secciones
+     5. Widgets flotantes
+     6. Accesibilidad y preferencias del sistema
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Red de seguridad global
+   --------------------------------------------------------------------------
+   No se usa `overflow-x: hidden` en html/body a propósito: rompería el
+   `position: sticky` de la cabecera.
+   -------------------------------------------------------------------------- */
+
+/* Prosa: una palabra larga (URL, correo, nombre tecnico) se parte antes que
+   desbordar su caja. */
+.page-content,
+.elementor-widget-text-editor,
+.elementor-icon-box-description,
+.elementor-image-box-description {
+	overflow-wrap: break-word;
+}
+
+/* Los titulares NO se parten nunca por la mitad: su tamaño está ajustado a mano
+   en Elementor y partirlos deja letras huérfanas en la línea siguiente
+   («organizacione / s», «Ciberdefens / a»). `overflow-wrap` se hereda, así que
+   hay que anularlo de forma explícita: los contenedores de arriba envuelven a
+   los titulares.
+
+   Se midió el caso peor (Ciberdefensa a 360 px): el titular sobresale 6 px de
+   su caja, pero NO genera scroll horizontal en la página, así que el corte de
+   palabra salía mucho más caro que ese desbordamiento. */
+.elementor-heading-title,
+.elementor-icon-box-title,
+.elementor-image-box-title {
+	overflow-wrap: normal;
+}
+
+img,
+video,
+canvas,
+svg,
+iframe,
+embed,
+object {
+	max-width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   2. Medios embebidos
+   -------------------------------------------------------------------------- */
+
+img,
+video {
+	height: auto;
+}
+
+.elementor-widget-video iframe,
+.rll-youtube-player iframe,
+.wp-block-embed iframe {
+	max-width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   3. Tablas y texto largo (páginas legales)
+   --------------------------------------------------------------------------
+   `politica-de-privacidad.html` incluye una tabla de 492 px y
+   `politica-de-cookies.html` enlaces largos sin espacios: a 375 px arrastraban
+   toda la página hacia los lados.
+   -------------------------------------------------------------------------- */
+
+.page-content a,
+.elementor-widget-text-editor a {
+	overflow-wrap: anywhere;
+}
+
+@media (max-width: 767px) {
+	.page-content table,
+	.elementor-widget-text-editor table {
+		display: block;
+		width: 100%;
+		max-width: 100%;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	.page-content table th,
+	.page-content table td {
+		word-break: break-word;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   4. Correcciones puntuales de secciones
+   --------------------------------------------------------------------------
+   Elementor reparte las columnas con `flex: 1 1 0`, así que nunca saltan de
+   línea por estrechas que queden. Solo se fuerza el salto en las filas que se
+   midieron desbordadas; el resto del sitio conserva su comportamiento.
+   -------------------------------------------------------------------------- */
+
+/* Pie de página (presente en todas las páginas): texto + botón en una fila sin
+   permitir salto. A partir de tablet se apilan. */
+@media (max-width: 1024px) {
+	.elementor-element-3250c5f {
+		flex-wrap: wrap;
+	}
+
+	.elementor-element-3250c5f > .elementor-widget {
+		max-width: 100%;
+	}
+}
+
+/* alert-framl-defense.html — fila de tres tarjetas de canal. */
+@media (max-width: 767px) {
+	.elementor-element-fe2fd12 .e-con.e-flex > .e-con {
+		flex: 1 1 100%;
+		min-width: 100%;
+	}
+}
+
+/* tecnologia.html — fila «Operamos / Nos adaptamos / Evolucionamos contigo».
+   El contenedor es `flex-wrap: nowrap`, así que hay que permitir el salto
+   además de dar ancho completo a las columnas. */
+@media (max-width: 1024px) {
+	.elementor-element-2f54536 {
+		flex-wrap: wrap;
+	}
+
+	.elementor-element-2f54536 > .e-con {
+		flex: 1 1 100%;
+		min-width: 100%;
+	}
+
+	/* Conector decorativo entre tarjetas (`::after` en `right: -62px`): solo
+	   tiene sentido con las tarjetas en fila. */
+	.elementor-element-2f54536 > .e-con::after {
+		display: none;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   5. Widgets flotantes
+   -------------------------------------------------------------------------- */
+
+/* Burbuja de WhatsApp: en pantallas pequeñas el panel se abre más ancho que la
+   ventana y provocaba scroll horizontal. */
+@media (max-width: 480px) {
+	.joinchat__chatbox {
+		max-width: calc(100vw - (var(--sep, 6px) * 2));
+	}
+}
+
+/* Área táctil mínima recomendada. */
+@media (max-width: 767px) {
+	.elementor-button,
+	.joinchat__button {
+		min-height: 44px;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   6. Accesibilidad y preferencias del sistema
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+	outline: 2px solid currentColor;
+	outline-offset: 2px;
+}

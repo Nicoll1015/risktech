@@ -1,0 +1,23 @@
+.gt_switcher_wrapper{ background: #000; border-radius: 5px; padding: 10px; }
+
+a.glink{ color: #fff; }
+
+
+/* Salto de línea solo en desktop */
+.br-desktop {
+display: inline;
+}
+
+@media (max-width: 768px) {
+.br-desktop {
+display: none;
+}
+}
+
+/* Ocultar únicamente el título automático en las entradas del blog */
+body.single-post article.post > .entry-header,
+body.single-post article.post > .entry-title,
+body.single-post .site-main > .page-header,
+body.single-post .site-main > .page-title {
+  display: none !important;
+}

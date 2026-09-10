@@ -1,0 +1,16 @@
+# Sistema operativo
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*~
+
+# Temporales del proyecto
+_audit.html
+*.log
+node_modules/
