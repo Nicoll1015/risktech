@@ -295,19 +295,19 @@
   }
 
   /* Orden responsive */
-  .elementor-5716 .elementor-element.elementor-element-f358e88 .risk-flow__card--tl {
+  .elementor-5716 .elementor-element.elementor-element-f358e88 .risk-flow__center {
     order: 1 !important;
   }
 
-  .elementor-5716 .elementor-element.elementor-element-f358e88 .risk-flow__card--ml {
+  .elementor-5716 .elementor-element.elementor-element-f358e88 .risk-flow__card--tl {
     order: 2 !important;
   }
 
-  .elementor-5716 .elementor-element.elementor-element-f358e88 .risk-flow__card--bl {
+  .elementor-5716 .elementor-element.elementor-element-f358e88 .risk-flow__card--ml {
     order: 3 !important;
   }
 
-  .elementor-5716 .elementor-element.elementor-element-f358e88 .risk-flow__center {
+  .elementor-5716 .elementor-element.elementor-element-f358e88 .risk-flow__card--bl {
     order: 4 !important;
   }
 
