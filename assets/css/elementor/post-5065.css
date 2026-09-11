@@ -160,3 +160,16 @@
 .elementor-5065 .elementor-element.elementor-element-50fb70a .metric-card:hover .metric-text p {
   color: #062643 !important;
 }/* End custom CSS */
+
+/* Poner "¿Cómo fortalecer tus procesos de KYC?" arriba de sus tarjetas en móvil */
+@media (max-width: 767px) {
+  .elementor-5065 .elementor-element.elementor-element-8867c85 {
+    order: -1 !important;
+  }
+  .elementor-5065 .elementor-element.elementor-element-2ab4759 {
+    order: 1 !important;
+  }
+  .elementor-5065 .elementor-element.elementor-element-1019ace {
+    order: 2 !important;
+  }
+}
